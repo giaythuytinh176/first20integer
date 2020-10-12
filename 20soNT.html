@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    let number = +prompt("Nhap so luong so nguyen to can in ra: ");
+    let integer = 2;
+    let count = 0;
+    while (integer > 0) {
+        //debugger
+        if (isSoNT(integer)) {
+            document.write("So nt la: " + integer + "<br>");
+            count++;
+            if (count == number) {
+                break;
+            }
+        }
+        integer++;
+    }
+
+    function isSoNT(integer) {
+        //debugger
+        for (let i = 2; i <= integer / 2; i++) {
+            if (integer % i == 0) {
+                return false;
+            } //else {
+                //return true;
+            //}
+            // cho return true vao day bi sai???
+        }
+        return true;
+    }
+
+
+</script>
+
+</body>
+</html>
